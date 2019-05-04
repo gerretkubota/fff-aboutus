@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import employeeData from '../data/data.json';
 
+import EmployeesContainer from './EmployeesContainer.jsx';
+
 export default class AboutUsContainer extends Component {
   constructor() {
     super();
@@ -21,17 +23,16 @@ export default class AboutUsContainer extends Component {
         description: empData[i].description,
       });
     }
-
-    this.setState({ employees }, () => console.log('hi'));
+    this.setState({ employees }, () => {
+      console.log('harro');
+    });
   }
 
   render() {
     const { employees } = this.state;
     return (
-      <div>
-        {employees.map(emp => (
-          <li>{emp.name}</li>
-        ))}
+      <div className="aboutus-container">
+        <EmployeesContainer employees={employees} />
       </div>
     );
   }
