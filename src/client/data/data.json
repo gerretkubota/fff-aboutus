@@ -1,10 +1,14 @@
 {
   "employees": [
-    {
-      "id": 1,
-      "name": "Jon Snow",
-      "url": "https://vignette.wikia.nocookie.net/gameofthrones/images/d/d3/JonSnowSeason8HB.jpg/revision/latest/scale-to-width-down/666?cb=20190401173347",
-      "description": "Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone. From infancy, Jon is presented as the bastard son of Lord Eddard Stark, Lyanna's brother, and raised by Eddard alongside his lawful children at Winterfell but his true parentage is kept secret from everyone, including Jon himself. In order to escape his bastard status, Jon joins the Night's Watch and is eventually chosen as Lord Commander."
-    }
+    "Jon%20Snow",
+    "Daenerys%20Targaryen",
+    "Arya%20Stark",
+    "Brandon%20Stark",
+    "Sansa%20Stark",
+    "Tyrion%20Lannister",
+    "Jaime%20Lannister",
+    "Cersei%20Lannister",
+    "Brienne%20Of%20Tarth",
+    "Sandor%20Clegane"
   ]
 }

@@ -5,9 +5,11 @@ import Employee from '../components/Employee.jsx';
 
 const EmployeesContainer = ({ employees }) => (
   <div className="employees-container">
-    Employees Container
+    {/* Employees Container */}
     {employees.map(emp => (
-      <Employee url={emp.url} />
+      <div>
+        <Employee name={emp.name} />
+      </div>
     ))}
   </div>
 );

@@ -29,9 +29,9 @@ div.employees-container {
 }
 
 div.employee {
-  flex-basis: 50px;
+  /* flex-basis: 50px; */
 }
 
-div.employee img {
+/* div.employee img {
   max-width: 100%;
-}
+} */

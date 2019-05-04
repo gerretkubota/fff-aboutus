@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import axios from 'axios';
 import employeeData from '../data/data.json';
 
 import EmployeesContainer from './EmployeesContainer.jsx';
@@ -14,19 +15,26 @@ export default class AboutUsContainer extends Component {
   }
 
   componentDidMount() {
-    const employees = [];
     const empData = employeeData.employees;
-    for (let i = 0; i < empData.length; i++) {
-      employees.push({
-        name: empData[i].name,
-        url: empData[i].url,
-        description: empData[i].description,
-      });
-    }
-    this.setState({ employees }, () => {
-      console.log('harro');
-    });
+    this.gatherData(empData).then(employees => this.setState({ employees }));
   }
+
+  gatherData = async empData =>
+    Promise.all(
+      empData.map(async emp => {
+        const response = await axios.get(`/api/characters?name=${emp}`);
+        const data = response.data[0];
+        const title = data.titles ? data.titles[0] : 'None';
+        const alias = data.aliases ? data.aliases[0] : 'None';
+        const employee = {
+          name: data.name,
+          title,
+          alias,
+        };
+        console.log(employee);
+        return employee;
+      })
+    );
 
   render() {
     const { employees } = this.state;
