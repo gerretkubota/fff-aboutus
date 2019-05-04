@@ -8,7 +8,7 @@
 div.app {
   display: flex;
   justify-content: center;
-  border: 1px solid red;
+  border: 2px solid red;
   height: 80vh;
 }
 
@@ -18,20 +18,38 @@ div.aboutus-container {
   align-items: center;
   justify-content: center;
 
-  border: 1px solid green;
+  width: 900px;
+  border: 2px solid green;
 }
 
 div.employees-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 800px;
+  justify-content: space-evenly;
+
+  width: 100%;
+  border: 2px solid purple;
 }
 
 div.employee {
-  /* flex-basis: 50px; */
+  border: 2px solid orange;
+  flex-basis: 50px;
 }
 
-/* div.employee img {
-  max-width: 100%;
-} */
+div.pane-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+  border: 2px solid lightpink;
+}
+
+div.pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  border: 2px solid brown;
+}

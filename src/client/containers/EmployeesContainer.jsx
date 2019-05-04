@@ -7,9 +7,7 @@ const EmployeesContainer = ({ employees }) => (
   <div className="employees-container">
     {/* Employees Container */}
     {employees.map(emp => (
-      <div>
-        <Employee name={emp.name} />
-      </div>
+      <Employee name={emp.name} />
     ))}
   </div>
 );

@@ -4,6 +4,7 @@ import axios from 'axios';
 import employeeData from '../data/data.json';
 
 import EmployeesContainer from './EmployeesContainer.jsx';
+import PaneContainer from './PaneContainer.jsx';
 
 export default class AboutUsContainer extends Component {
   constructor() {
@@ -11,12 +12,16 @@ export default class AboutUsContainer extends Component {
 
     this.state = {
       employees: [],
+      paneQueue: [],
     };
   }
 
   componentDidMount() {
     const empData = employeeData.employees;
-    this.gatherData(empData).then(employees => this.setState({ employees }));
+    this.gatherData(empData).then(employees => {
+      const paneQueue = [employees[0], employees[1], employees[2]];
+      this.setState({ employees, paneQueue });
+    });
   }
 
   gatherData = async empData =>
@@ -31,15 +36,15 @@ export default class AboutUsContainer extends Component {
           title,
           alias,
         };
-        console.log(employee);
         return employee;
       })
     );
 
   render() {
-    const { employees } = this.state;
+    const { employees, paneQueue } = this.state;
     return (
       <div className="aboutus-container">
+        <PaneContainer paneQueue={paneQueue} />
         <EmployeesContainer employees={employees} />
       </div>
     );
