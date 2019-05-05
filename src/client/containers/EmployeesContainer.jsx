@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 
 import Employee from '../components/Employee.jsx';
 
-const EmployeesContainer = ({ employees }) => (
+const EmployeesContainer = ({ employees, handleClick }) => (
   <div className="employees-container">
-    {/* Employees Container */}
     {employees.map(emp => (
-      <Employee name={emp.name} />
+      <Employee name={emp.name} handleClick={handleClick} />
     ))}
   </div>
 );
 
 EmployeesContainer.propTypes = {
   employees: PropTypes.array,
+  handleClick: PropTypes.func,
 };
 
 export default EmployeesContainer;
