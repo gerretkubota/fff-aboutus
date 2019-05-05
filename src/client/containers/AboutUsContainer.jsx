@@ -28,22 +28,25 @@ export default class AboutUsContainer extends Component {
   gatherData = async empData =>
     Promise.all(
       empData.map(async emp => {
-        const response = await axios.get(`/api/characters?name=${emp}`);
+        const response = await axios.get(`/api/characters?name=${emp.name}`);
         const data = response.data[0];
         const title = data.titles ? data.titles[0] : 'None';
         const alias = data.aliases ? data.aliases[0] : 'None';
+        const { full } = emp;
+        const { thumb } = emp;
         const employee = {
           name: data.name,
           title,
           alias,
+          full,
+          thumb,
         };
         return employee;
       })
     );
 
-  handleClick = name => event => {
+  handleClick = (name, thumb) => event => {
     event.preventDefault();
-
     const { paneQueue, employees } = this.state;
     const newQueue = paneQueue.slice(0);
     const index = newQueue.findIndex(emp => emp.name === name);
