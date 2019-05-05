@@ -20,7 +20,8 @@ export default class AboutUsContainer extends Component {
   componentDidMount() {
     const empData = employeeData.employees;
     this.gatherData(empData).then(employees => {
-      this.setState({ employees });
+      const paneQueue = [employees[0], employees[1], employees[2]];
+      this.setState({ employees, paneQueue });
     });
   }
 

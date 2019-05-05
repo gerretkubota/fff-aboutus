@@ -16,7 +16,7 @@ div.aboutus-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   width: 900px;
   border: 2px solid green;
