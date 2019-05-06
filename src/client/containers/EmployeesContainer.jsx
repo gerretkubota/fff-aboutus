@@ -6,7 +6,12 @@ import Employee from '../components/Employee.jsx';
 const EmployeesContainer = ({ employees, handleClick }) => (
   <div className="employees-container">
     {employees.map(emp => (
-      <Employee name={emp.name} thumb={emp.thumb} handleClick={handleClick} />
+      <Employee
+        name={emp.name}
+        thumb={emp.thumb}
+        handleClick={handleClick}
+        active={emp.active}
+      />
     ))}
   </div>
 );
