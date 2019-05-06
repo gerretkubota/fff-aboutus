@@ -25,6 +25,7 @@ module.exports = {
             ],
             '@babel/preset-react',
           ],
+          plugins: ['@babel/plugin-proposal-class-properties'],
         },
       },
       {
@@ -42,5 +43,11 @@ module.exports = {
   ],
   devServer: {
     contentBase: path.resolve(__dirname, './src/'),
+    proxy: {
+      '/': {
+        target: 'https://anapioficeandfire.com/',
+        changeOrigin: true,
+      },
+    },
   },
 };
