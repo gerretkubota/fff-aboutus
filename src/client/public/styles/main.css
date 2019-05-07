@@ -187,3 +187,13 @@ div.line2 {
 /* end of animation */
 
 /* end of app */
+
+@media screen and (max-width: 812px) and (min-width: 0) {
+  .move-exit-active {
+    /* position: absolute; */
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: 0;
+  }
+}
