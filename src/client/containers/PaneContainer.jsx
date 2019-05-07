@@ -21,8 +21,6 @@ const PaneContainer = ({ paneQueue }) => (
         key={emp.name}
         timeout={500}
         classNames="move"
-        onEntered={() => false}
-        onExit={() => false}
         unmountOnExit
       >
         <Pane
