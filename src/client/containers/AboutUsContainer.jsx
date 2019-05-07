@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
-// import { TransitionGroup } from 'react-transition-group';
 import employeeData from '../data/data.json';
 import { rearrangePane, checkActive } from '../utils/helperFunctions.js';
 
