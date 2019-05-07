@@ -7,6 +7,7 @@ const EmployeesContainer = ({ employees, handleClick }) => (
   <div className="employees-container">
     {employees.map(emp => (
       <Employee
+        key={emp.name}
         name={emp.name}
         thumb={emp.thumb}
         handleClick={handleClick}

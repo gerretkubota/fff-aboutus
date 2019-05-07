@@ -69,6 +69,7 @@ div.employee {
 
 div.employee:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 div.employee img {
@@ -190,7 +191,6 @@ div.line2 {
 
 @media screen and (max-width: 812px) and (min-width: 0) {
   .move-exit-active {
-    /* position: absolute; */
     top: unset;
     right: unset;
     bottom: 0;

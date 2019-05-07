@@ -17,7 +17,14 @@ import Pane from '../components/Pane.jsx';
 const PaneContainer = ({ paneQueue }) => (
   <TransitionGroup className="pane-container">
     {paneQueue.map(emp => (
-      <CSSTransition key={emp.name} timeout={500} classNames="move">
+      <CSSTransition
+        key={emp.name}
+        timeout={500}
+        classNames="move"
+        onEntered={() => false}
+        onExit={() => false}
+        unmountOnExit
+      >
         <Pane
           key={emp.name}
           name={emp.name}
